@@ -28,9 +28,7 @@ var _gaq = _gaq || [];
 function handleBeforeSearch(e) {
 	e.preventDefault();
 	var url = ext.settings.engine;
-	if (url == 'disable') {
-		url = 'http://' + e.query + '.com'
-	} else {
+	if (url !== 'disable') {
 		if (url == 'custom') {
 			var url = ext.settings.customEngine;
 		}
